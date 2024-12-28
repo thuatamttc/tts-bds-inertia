@@ -1,20 +1,17 @@
-import defaultTheme from "tailwindcss/defaultTheme";
-import bdsToanThinhConfig from './resources/js/bdstoanthinh/packages/@core/ui-kit/tailwind-config/src/index'
 /** @type {import('tailwindcss').Config} */
 export default {
-    ...bdsToanThinhConfig,
     content: [
-        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
-        "./storage/framework/views/*.php",
-        "./resources/views/**/*.blade.php", // Chỉ quét files blade trong views
-       
+        './resources/js/**/*.vue',
+        './resources/js/**/*.js',
+        './resources/js/**/*.ts',
+        './resources/views/**/*.blade.php',
     ],
+    // Tránh xung đột với Ant Design
+    corePlugins: {
+        preflight: false, // Disable Tailwind's base styles
+    },
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
-            },
-        },
+        extend: {},
     },
     plugins: [],
-};
+}

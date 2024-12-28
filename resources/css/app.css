@@ -2,8 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../js/bdstoanthinh/packages/styles/src/antd/index.css';
-@import '../js/bdstoanthinh/packages/styles/src/global/index.scss';
+
+@layer utilities {
+  /* Text utilities với opacity */
+  .text-foreground\/80 {
+    color: hsl(var(--foreground) / 0.8);
+  }
+  .text-foreground\/90 {
+    color: hsl(var(--foreground) / 0.9);
+  }
+  
+  /* Fill utilities với opacity */
+  .fill-foreground\/90 {
+    fill: hsl(var(--foreground) / 0.9);
+  }
+  .fill-foreground\/80 {
+    fill: hsl(var(--foreground) / 0.8);
+  }
+  
+  .text-foreground\/90 {
+    color: hsl(var(--foreground) / 0.9);
+  }
+  .text-foreground\/80 {
+    color: hsl(var(--foreground) / 0.8);
+  } 
+  /* Stroke utilities với opacity */
+  .stroke-foreground\/90 {
+    stroke: hsl(var(--foreground) / 0.9);
+  }
+  .stroke-foreground\/80 {
+    stroke: hsl(var(--foreground) / 0.8);
+  }
+  .bg-accent {
+    background-color: hsl(var(--accent));
+  }
+  .text-accent {
+    color: hsl(var(--accent));
+  }
+  .border-accent {
+    border-color: hsl(var(--accent));
+  }
+  .accent-foreground {
+    color: hsl(var(--accent-foreground));
+  }
+}
 
 @layer base {
   :root {
